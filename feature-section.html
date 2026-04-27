@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grow With Clarity – Feature Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    /* ── GRID WRAPPER ── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* ── SHARED CARD ── */
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ═══════════════════════════════════════
+       PANEL 1 — Phone Mockup
+    ═══════════════════════════════════════ */
+    .panel-phone {
+      padding: 32px 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 480px;
+      background: #f8f9fc;
+    }
+
+    /* Phone frame */
+    .phone-frame {
+      width: 220px;
+      background: #111;
+      border-radius: 38px 38px 0 0;
+      padding: 14px 10px 0;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .phone-notch {
+      width: 70px;
+      height: 10px;
+      background: #111;
+      border-radius: 10px;
+      margin: 0 auto 10px;
+    }
+    .phone-screen {
+      background: #f0f3fa;
+      border-radius: 28px 28px 0 0;
+      padding: 18px 16px 22px;
+    }
+
+    /* Circular progress */
+    .progress-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .circle-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+    .circle-container svg {
+      transform: rotate(-120deg);
+    }
+    .circle-bg {
+      fill: none;
+      stroke: #e2e8f0;
+      stroke-width: 8;
+    }
+    .circle-progress {
+      fill: none;
+      stroke: url(#blueGrad);
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 251.2;
+      stroke-dashoffset: 75;
+      animation: drawCircle 1.6s ease-out forwards;
+    }
+    @keyframes drawCircle {
+      from { stroke-dashoffset: 251.2; }
+      to   { stroke-dashoffset: 75; }
+    }
+    .circle-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .circle-icon .arrow-btn {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #4f9cf9, #2b6de8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(79,156,249,0.5);
+    }
+    .circle-icon .arrow-btn svg { color: white; }
+
+    /* Labels */
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 600;
+      color: #374151;
+      margin-top: 4px;
+    }
+    .progress-hint {
+      text-align: center;
+      font-size: 9.5px;
+      color: #9ca3af;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* Performance row */
+    .perf-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .perf-row .current {
+      font-weight: 500;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .perf-amount {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2563eb;
+      margin-top: 6px;
+    }
+
+    /* Blue button */
+    .phone-btn {
+      width: 100%;
+      margin-top: 12px;
+      padding: 9px;
+      background: linear-gradient(135deg, #4f9cf9, #2b6de8);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    /* SEC badge */
+    .sec-badge {
+      position: absolute;
+      bottom: 52px;
+      right: 16px;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #c7d9f8, #a5c0f5);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 6.5px;
+      font-weight: 700;
+      color: #1e40af;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      box-shadow: 0 4px 14px rgba(79,156,249,0.3);
+      z-index: 10;
+    }
+    .sec-badge .badge-shield {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+
+    /* Yellow blob */
+    .blob-yellow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 90px;
+      height: 90px;
+      background: #fbbf24;
+      border-radius: 50%;
+      transform: translate(-30%, 30%);
+      opacity: 0.9;
+    }
+
+    /* ═══════════════════════════════════════
+       PANEL 2 — Text + Photo
+    ═══════════════════════════════════════ */
+    .panel-text {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: transparent;
+    }
+    .panel-text .card { flex: 1; }
+
+    .text-card {
+      padding: 36px 28px;
+      background: #f8f9fc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .text-card h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .text-card h2 span {
+      color: #2563eb;
+    }
+    .text-card p {
+      font-size: 13.5px;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-top: 14px;
+    }
+
+    /* Photo card */
+    .photo-card {
+      height: 200px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #f9a8d4, #fbcfe8, #c4b5fd);
+    }
+    .photo-card .confetti-dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+    .photo-card .face-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    /* Stylized abstract face using CSS */
+    .face-art {
+      width: 160px;
+      height: 190px;
+      background: linear-gradient(180deg, #fde68a 0%, #f9a8d4 60%, #c4b5fd 100%);
+      border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+      position: relative;
+      bottom: -10px;
+      box-shadow: 0 -10px 40px rgba(196,181,253,0.4);
+    }
+    .face-art::before {
+      content: '';
+      position: absolute;
+      top: 38%;
+      left: 20%;
+      width: 60%;
+      height: 20%;
+      background: rgba(255,255,255,0.35);
+      border-radius: 50%;
+      filter: blur(6px);
+    }
+
+    /* Confetti dots */
+    .dot1 { width:12px; height:12px; background:#fbbf24; top:20%; left:15%; }
+    .dot2 { width:8px;  height:8px;  background:#f472b6; top:55%; left:8%;  }
+    .dot3 { width:10px; height:10px; background:#60a5fa; top:30%; right:12%; }
+    .dot4 { width:7px;  height:7px;  background:#34d399; top:65%; right:20%;}
+    .dot5 { width:14px; height:14px; background:#fbbf24; bottom:15%; left:35%;}
+
+    /* ═══════════════════════════════════════
+       PANEL 3 — Flower Tree
+    ═══════════════════════════════════════ */
+    .panel-tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      background: #f8f9fc;
+      position: relative;
+      min-height: 480px;
+    }
+
+    .tree-wrap {
+      position: relative;
+      width: 260px;
+      height: 340px;
+    }
+
+    /* Trunk & pot */
+    .trunk {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 90px;
+      background: linear-gradient(180deg, #a78bfa, #c4b5fd);
+      border-radius: 6px;
+    }
+    .pot {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 44px;
+      background: linear-gradient(135deg, #fde68a, #fbbf24);
+      border-radius: 6px 6px 12px 12px;
+    }
+    .pot::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -6px;
+      right: -6px;
+      height: 14px;
+      background: #fcd34d;
+      border-radius: 6px;
+    }
+
+    /* Branch lines */
+    .branch {
+      position: absolute;
+      background: linear-gradient(90deg, #c4b5fd, #a78bfa);
+      border-radius: 4px;
+      transform-origin: left center;
+    }
+    .branch-left  { width: 60px; height: 6px; bottom: 175px; left: 90px; transform: rotate(-35deg); }
+    .branch-right { width: 60px; height: 6px; bottom: 190px; left: 118px; transform: rotate(30deg); }
+    .branch-top   { width: 40px; height: 5px; bottom: 220px; left: 110px; transform: rotate(-60deg); }
+
+    /* Flower badges */
+    .flower {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .flower-petal-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .petal-ring {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    /* Scalloped edge via border trick */
+    .petal-ring::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: inherit;
+      clip-path: polygon(
+        50% 0%, 61% 15%, 79% 9%, 73% 27%, 91% 33%,
+        78% 47%, 91% 62%, 73% 65%, 79% 84%, 61% 80%,
+        50% 95%, 39% 80%, 21% 84%, 27% 65%, 9% 62%,
+        22% 47%, 9% 33%, 27% 27%, 21% 9%, 39% 15%
+      );
+    }
+
+    .petal-icon {
+      font-size: 26px;
+      z-index: 1;
+    }
+    .petal-label {
+      position: absolute;
+      width: 110px;
+      text-align: center;
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: inherit;
+      /* Arc text via CSS transform trick */
+    }
+
+    /* Curved text using SVG inside each flower */
+    .flower-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Individual flowers */
+    .fl-pink   { top: 10px;  left: 10px; }
+    .fl-green  { top: 10px;  right: 10px; }
+    .fl-yellow { top: 120px; left: 20px; }
+    .fl-blue   { top: 130px; right: 20px; }
+    .fl-center { top: 60px;  left: 50%;  transform: translateX(-50%); }
+
+    .pr-pink   { background: linear-gradient(135deg, #fb7185, #f43f5e); }
+    .pr-green  { background: linear-gradient(135deg, #4ade80, #22c55e); }
+    .pr-yellow { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+    .pr-blue   { background: linear-gradient(135deg, #38bdf8, #0ea5e9); }
+    .pr-purple { background: linear-gradient(135deg, #c084fc, #a855f7); }
+
+    .pr-pink   .petal-icon-color { color: white; }
+    .pr-green  .petal-icon-color { color: white; }
+    .pr-yellow .petal-icon-color { color: white; }
+    .pr-blue   .petal-icon-color { color: white; }
+
+    /* Curved label text using SVG textPath */
+    .curved-label text {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      fill: rgba(255,255,255,0.9);
+    }
+
+    /* Blob in panel 3 */
+    .blob-pink-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #f9a8d4, #fb7185);
+      border-radius: 50%;
+      transform: translate(30%, 30%);
+      opacity: 0.7;
+    }
+    .blob-yellow-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 70px;
+      background: #fbbf24;
+      border-radius: 50%;
+      transform: translate(-30%, 30%);
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .panel-text { flex-direction: row; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="feature-grid">
+
+  <!-- ── PANEL 1: PHONE MOCKUP ── -->
+  <div class="card panel-phone">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+
+        <!-- Circular progress -->
+        <div class="progress-wrap">
+          <div class="circle-container">
+            <svg width="120" height="120" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <circle class="circle-bg"       cx="50" cy="50" r="40"/>
+              <circle class="circle-progress"  cx="50" cy="50" r="40"/>
+            </svg>
+            <div class="circle-icon">
+              <div class="arrow-btn">
+                <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <line x1="7" y1="17" x2="17" y2="7"/>
+                  <polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-labels">
+          <span>70%</span>
+          <span>₦100M</span>
+        </div>
+        <p class="progress-hint">You're doing great! Top up to reach<br>your milestone target!</p>
+
+        <div class="perf-row">
+          <span>Performance</span>
+          <span class="current">Current ▾</span>
+        </div>
+        <div class="perf-amount">₦991k</div>
+        <button class="phone-btn">Top Up</button>
+
+      </div>
+    </div>
+
+    <!-- SEC Badge -->
+    <div class="sec-badge">
+      <span class="badge-shield">🛡</span>
+      <span>SEC</span>
+      <span>Licensed</span>
+      <span>Fund Manager</span>
+    </div>
+
+    <!-- Yellow blob -->
+    <div class="blob-yellow"></div>
+  </div>
+
+
+  <!-- ── PANEL 2: TEXT + PHOTO ── -->
+  <div class="panel-text" style="background:transparent;">
+
+    <div class="card text-card">
+      <h2>Grow with clarity,<br><span>not confusion.</span></h2>
+      <p>What's better than watching your money grow in real time? Tracking your investments, savings, and returns without the guesswork.</p>
+    </div>
+
+    <div class="card photo-card">
+      <!-- Confetti dots -->
+      <div class="confetti-dot dot1"></div>
+      <div class="confetti-dot dot2"></div>
+      <div class="confetti-dot dot3"></div>
+      <div class="confetti-dot dot4"></div>
+      <div class="confetti-dot dot5"></div>
+      <!-- Abstract face art -->
+      <div class="face-placeholder">
+        <div class="face-art"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ── PANEL 3: FLOWER TREE ── -->
+  <div class="card panel-tree">
+
+    <div class="tree-wrap">
+
+      <!-- Branches -->
+      <div class="branch branch-left"></div>
+      <div class="branch branch-right"></div>
+      <div class="branch branch-top"></div>
+
+      <!-- Trunk -->
+      <div class="trunk"></div>
+
+      <!-- Pot -->
+      <div class="pot"></div>
+
+      <!-- FLOWER 1 — Customer First (pink, top-left) -->
+      <div class="flower fl-pink">
+        <div class="flower-petal-wrap">
+          <div class="petal-ring pr-pink">
+            <svg class="curved-label" viewBox="0 0 80 80">
+              <defs>
+                <path id="cp1" d="M10,40 a30,30 0 1,1 60,0"/>
+              </defs>
+              <text><textPath href="#cp1">CUSTOMER FIRST</textPath></text>
+            </svg>
+            <span style="font-size:22px; z-index:2;">❤️</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOWER 2 — Multi-Currency (green, top-right) -->
+      <div class="flower fl-green">
+        <div class="flower-petal-wrap">
+          <div class="petal-ring pr-green">
+            <svg class="curved-label" viewBox="0 0 80 80">
+              <defs>
+                <path id="cp2" d="M8,40 a32,32 0 1,1 64,0"/>
+              </defs>
+              <text><textPath href="#cp2">MULTI-CURRENCY</textPath></text>
+            </svg>
+            <span style="font-size:22px; z-index:2;">🔄</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOWER 3 — Investments (purple, center) -->
+      <div class="flower fl-center">
+        <div class="flower-petal-wrap">
+          <div class="petal-ring pr-purple">
+            <svg class="curved-label" viewBox="0 0 80 80">
+              <defs>
+                <path id="cp3" d="M10,40 a30,30 0 1,1 60,0"/>
+              </defs>
+              <text><textPath href="#cp3">INVESTMENTS</textPath></text>
+            </svg>
+            <span style="font-size:22px; z-index:2;">📈</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOWER 4 — Best-in-class Assets (yellow, mid-left) -->
+      <div class="flower fl-yellow">
+        <div class="flower-petal-wrap">
+          <div class="petal-ring pr-yellow">
+            <svg class="curved-label" viewBox="0 0 80 80">
+              <defs>
+                <path id="cp4" d="M6,40 a34,34 0 1,1 68,0"/>
+              </defs>
+              <text><textPath href="#cp4">BEST-IN-CLASS ASSETS</textPath></text>
+            </svg>
+            <span style="font-size:22px; z-index:2;">✅</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOWER 5 — Transparency (blue, mid-right) -->
+      <div class="flower fl-blue">
+        <div class="flower-petal-wrap">
+          <div class="petal-ring pr-blue">
+            <svg class="curved-label" viewBox="0 0 80 80">
+              <defs>
+                <path id="cp5" d="M10,40 a30,30 0 1,1 60,0"/>
+              </defs>
+              <text><textPath href="#cp5">TRANSPARENCY</textPath></text>
+            </svg>
+            <span style="font-size:22px; z-index:2;">👁️</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tree-wrap -->
+
+    <div class="blob-pink-right"></div>
+    <div class="blob-yellow-left"></div>
+  </div>
+
+</section>
+
+</body>
+</html>

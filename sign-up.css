@@ -1,0 +1,490 @@
+/* SIGN-UP STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 200px;
+    background-color: azure;
+}
+.logo-image {
+    width: 100%;
+    padding: 20px;
+}
+
+.logo-image img {
+    margin-left: 90px;
+    margin-bottom: 30px;
+}
+
+
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.journey {
+    width: 53%;
+    padding: 50px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.journey h3 {
+    width: 80%;
+    padding: 20px;
+    font-size: 60px;
+    color: rgb(61, 99, 143);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.journey span {
+    padding: 20px;
+    margin-top: 30px;
+    color: rgb(108, 130, 163);
+    font-size: 15px;
+}
+
+.journey a {
+    text-decoration: none;
+    color: rgb(0, 110, 245);
+}
+
+.google {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.google a {
+    color: rgb(10, 47, 102);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+
+.google img {
+    width: 18px;
+    height: 18px;
+}
+
+.divider {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.divider hr {
+    width: 50%;
+    border: 0.5px solid #ccc;
+}
+
+.divider span {
+    margin-top: auto;
+}
+
+.journey input {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.journey input:focus{
+    border-color: blue;
+    outline: none;
+}
+
+.journey button {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(0, 110, 245);
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: rgb(0, 110, 245);
+}
+.start h5 {
+    color: rgb(10, 47, 102);
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start p {
+    width: 400px;
+    color: rgb(113, 129, 163);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start a {
+    text-decoration: none;
+    color: rgb(0, 110, 245);
+}
+.cover-image img{
+    width: 40%;
+    position: absolute;
+    right: 20px;
+    top: 500px;
+}
+.cowrywise{
+    width: 100%;
+    padding: 20px;
+    display: block;
+    gap: 30px;
+}
+
+
+
+
+/* RESPONSIVENESS FOR SIGN-UP PAGE */
+@media screen and (max-width:760px) {
+    form {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+.logo-image img {
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.journey {
+    width: 100%;
+    padding: 20px;
+}
+
+.journey h3 {
+    width: 100%;
+    padding: 20px;
+    font-size: 35px;
+    color: rgb(61, 99, 143);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.journey span {
+    padding: 20px;
+    margin-top: 30px;
+    color: rgb(108, 130, 163);
+    font-size: 15px;
+}
+
+.google {
+    margin-top: 20px;
+}
+
+.divider {
+    width: 100%;
+    padding: 10px;
+}
+
+.divider hr {
+    width: 50%;
+    border: 0.5px solid #ccc;
+}
+
+.journey input {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.journey input:focus{
+    border-color: blue;
+    outline: none;
+}
+
+.journey button {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(0, 110, 245);
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: rgb(0, 110, 245);
+}
+.start {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}   
+.start h5 {
+    font-size: 20px;
+}
+
+.start p {
+    width: 100%;
+    padding: 20px;
+    color: rgb(113, 129, 163);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start a {
+    text-decoration: none;
+    color: rgb(0, 110, 245);
+}
+.cover-image img{
+    display: none;
+    
+}
+}
+
+
+
+/* LOGIN PAGE STYLE */
+.head {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 200px;
+    background-color: azure;
+}
+
+.logo-cowrywise {
+    width: 100%;
+    padding: 20px;
+}
+
+.logo-cowrywise img {
+    margin-left: 150px;
+    margin-bottom: 30px;
+}
+
+.container-head {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cover {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cover h1 {
+    color: rgb(10, 47, 102);
+    font-size: 50px;
+}
+
+.cover p {
+    color: rgb(171, 184, 204);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.cover span {
+    color: rgb(112, 130, 161);
+    font-size: 15px;
+}
+
+.cover a {
+    color: rgb(22, 107, 245);
+    text-decoration: none;
+}
+
+.page-1 {
+    width: 500px;
+    height: 500px;
+    padding: 50px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-1 a {
+    color: rgb(10, 47, 102);
+    padding: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.page-1 img {
+    width: 18px;
+    height: 18px;
+}
+
+.page-1 input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.page-1 input:focus{
+    border-color: blue;
+    outline: none;
+
+}
+.eyes{
+    position: absolute ;
+    top: 475px;
+    right: 450px;
+}
+
+.password p {
+    color: rgb(22, 107, 245);
+}
+
+.password button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(22, 107, 245);
+    background-color: rgb(22, 107, 245);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content-side {
+    padding: 20px;
+    display: flex;
+    gap: 70px;
+    margin-left: 550px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-side span {
+    color: rgb(112, 130, 161);
+    font-weight: 500;
+}
+
+.content-side a {
+    text-decoration: none;
+    color: rgb(22, 107, 245);
+}
+
+.content-side p {
+    color: rgb(112, 130, 161);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+/* LOGIN PAGE STYLE  RESPONSIVENESS*/
+@media screen and (max-width: 768px) {
+    .head {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo-cowrywise {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo-cowrywise img {
+        margin: auto;
+    }
+
+    .container-head {
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+    .cover h1 {
+        font-size: 40px;
+    }
+
+    .page-1 {
+        width: 100%;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .page-1 a {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        margin: auto;
+    }
+
+    .page-1 img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .page-1 input {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+    }
+
+    .password p {
+        color: rgb(22, 107, 245);
+    }
+
+    .password button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid rgb(22, 107, 245);
+        background-color: rgb(22, 107, 245);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .content-side {
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        gap: 5px;
+        margin: auto;
+    }
+    .eyes{
+    position: absolute ;
+    top: 585px;
+    right: 80px;
+}
+
+}
