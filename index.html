@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
+        <div class="container gap-5">
             <a class="navbar-brand" href="#"><img src="IMAGE/download (15).svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -22,27 +22,56 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Personal <img src="download (8).svg"
-                                alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Business <img src="download (8).svg" alt=""></a>
-                    </li>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">
-                            Developer <img src="download (8).svg" alt="">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Personal <i class="fa-solid fa-angle-down"></i>
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><img src="IMAGE/download (13).svg" alt="" width="30px"> Savings</a><p>Save and earn amazing results</p></li>
+                            <li><a class="dropdown-item" href="#"> <img src="IMAGE/download (12).svg" alt="" width="30px"> Mutual Funds</a><p class="with">Grow your wealth without chasing Charts</p></li>
+                            <li><a class="dropdown-item" href="#"><img src="IMAGE/download (19).svg" alt="" width="30px"> Stocks <button>New!</button></a><p class="with-god">Owns a slice of Nigeria's top countries</p></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Learn <img src="download (8).svg" alt=""></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Business <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><img src="IMAGE/download (11).svg" alt="" width="30px"> Sprout <p>Put your business idle cash to work</p></a></li>
+                        </ul>
+                    </li>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Developer <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><img src="IMAGE/download (13).svg" alt="" width="30px"> Embed <p>Offer investment services in your apps</p></a></li>
+                            <li><a class="dropdown-item" href="#"> <img src="IMAGE/download (12).svg" alt="" width="30px"> Docs <p>Read how to integrate the Embed API</p></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Learn <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><img src="IMAGE/download (9).svg" alt="" width="30px"> Glossary<p class="par">Learn from a curation of simple money terms</p></a></li>
+                            <li><a class="dropdown-item" href="#"> <img src="IMAGE/download (9).svg" alt="" width="30px"> Blog <p>Announcements, articles and stories</p></a></li>
+                            <li><a class="dropdown-item" href="#"> <img src="IMAGE/download (8).svg" alt="" width="30px"> Help Center <p>Everything you need to use Cowrywise</p></a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <a class="nav-link active" aria-current="page" href="Login.html">Log In</a>
-                    <button class="btn btn-outline-success" type="submit"><a href="sign-up.html">Sign up for
-                            free</a></button>
+                    <button class="btn btn-outline-success" type="submit"><a href="sign-up.html">Sign up for free</a></button>
                 </form>
             </div>
         </div>
@@ -348,31 +377,44 @@
     </section>
     <section class="page-8">
         <div class="footer-section">
-                <div class="social-icons">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-telegram"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <div class="page-81">
-                    <p>🇳🇬   5C Reverend Ogunbiyi Street, Ikeja GRA, Lagos Nigeria.</p>
-                    <div class="page-82">
-                        <img src="imgi_1_sec-logo.uViKvy1J.png" alt="" width="20px" ><span>SEC licensed</span><br><p>Fund Manager</p>
-                    </div>
-                </div>
-                <div class="page-footer">
-                    <p>Cowrywise Financial Technology Limited (“Cowrywise”) is a Fund/Portfolio Manager duly licensed by the Securities and Exchange Commission (SEC) of Nigeria, with License #1940 and its sister company, CFTL Digital Services Limited, is a Digital Sub-Broker duly licensed by the SEC, with License #3005.</p>
-                    <p>Our mutual funds are managed by our fund management partners and made available to our clients through our web and mobile applications. The fund manager for each mutual fund is disclosed on every mutual fund’s profile page. Any historical returns or expected returns are hypothetical in nature and may not reflect actual future performance. <a href="">View full list of available mutual funds on Cowrywise.</a></p>
-                    <p>The content on this website does not constitute a complete description of Cowrywise’s fund management services. By creating a Cowrywise account, you accept Cowrywise’s Terms of Use and Privacy Policy , and by using the stocks feature on Cowrywise, you accept CFTL Digital's <a href="">Terms of Use</a> and <a href="">Privacy Policy .</a></p>
-                    <p>Google Play and the Google Play logo are trademarks of Google LLC. Apple, the Apple logo, and iPhone are trademarks of Apple Inc. registered in the U.S.</p>
-                    <p>© 2026  Cowrywise Financial Technology. All rights reserved. RC 1419869. <a href="">NDPC Audited and Compliant. </a></p>
+            <div class="social-icons">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="page-81">
+                <p>🇳🇬 5C Reverend Ogunbiyi Street, Ikeja GRA, Lagos Nigeria.</p>
+                <div class="page-82">
+                    <img src="imgi_1_sec-logo.uViKvy1J.png" alt="" width="20px"><span>SEC licensed</span><br>
+                    <p>Fund Manager</p>
                 </div>
             </div>
+            <div class="page-footer">
+                <p>Cowrywise Financial Technology Limited (“Cowrywise”) is a Fund/Portfolio Manager duly licensed by the
+                    Securities and Exchange Commission (SEC) of Nigeria, with License #1940 and its sister company, CFTL
+                    Digital Services Limited, is a Digital Sub-Broker duly licensed by the SEC, with License #3005.</p>
+                <p>Our mutual funds are managed by our fund management partners and made available to our clients
+                    through our web and mobile applications. The fund manager for each mutual fund is disclosed on every
+                    mutual fund’s profile page. Any historical returns or expected returns are hypothetical in nature
+                    and may not reflect actual future performance. <a href="">View full list of available mutual funds
+                        on Cowrywise.</a></p>
+                <p>The content on this website does not constitute a complete description of Cowrywise’s fund management
+                    services. By creating a Cowrywise account, you accept Cowrywise’s Terms of Use and Privacy Policy ,
+                    and by using the stocks feature on Cowrywise, you accept CFTL Digital's <a href="">Terms of Use</a>
+                    and <a href="">Privacy Policy .</a></p>
+                <p>Google Play and the Google Play logo are trademarks of Google LLC. Apple, the Apple logo, and iPhone
+                    are trademarks of Apple Inc. registered in the U.S.</p>
+                <p>© 2026 Cowrywise Financial Technology. All rights reserved. RC 1419869. <a href="">NDPC Audited and
+                        Compliant. </a></p>
+            </div>
+        </div>
         </div>
         <div class="footer">
-            <span>We use cookies on our website to help us provide the best browsing experience. By continuing to use our website you are deemed to have agreed to the use of cookies.</span>
+            <span>We use cookies on our website to help us provide the best browsing experience. By continuing to use
+                our website you are deemed to have agreed to the use of cookies.</span>
             <div class="learn">
                 <a href="">LEARN MORE</a><span><a href="">OK</a></span>
             </div>
