@@ -7,7 +7,7 @@
 /* LANDING PAGE  */
 
 .dropdown-menu{
-    width: 400px;
+    width: 600px;
     background-color:  rgb(255, 255, 255);
 }
 .dropdown-menu li a{
@@ -31,6 +31,10 @@
     color: rgb(0, 102, 245) ;
     font-weight: 500;
     text-align: center;
+}
+.drop p{
+    text-align: justify;
+    margin-left: 20px;
 }
 .with{
     margin-left: 30px;
@@ -77,6 +81,7 @@
     color: white;
     width: 150px;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.01);
 }
 
 .d-flex button a {
@@ -84,6 +89,7 @@
     color: white !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
+    
 } 
 
 .page-1 {
@@ -91,7 +97,7 @@
     height: 80vh;
     padding: 20px;
     border: 5px solid azure;
-    background: url(IMAGE/download\ \(2\).svg);
+    background: url(IMAGE/download\ \(34\).svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -144,14 +150,6 @@
     margin-top: 30px;
 }
 
-.ladder-1 {
-    width: 100px;
-    height: 10px;
-    position: absolute;
-    top: 500px;
-    overflow: hidden;
-    left: 1500px;
-}
 
 .page-2 {
     width: 100%;
@@ -196,21 +194,21 @@
 }
 
 .card-cover {
-    width: 80%;
+    width: 100%;
     padding: 20px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 
 }
 
-.card {
-    width: 400px;
+.cdn {
+    width: 420px;
     height: 420px;
-    background: #e9edf3 !important;
-    border-radius: 28px !important;
+    background: #e9edf3;
+    border-radius: 28px;
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -234,7 +232,7 @@
 
 .visual img {
     position: absolute;
-    width: 92%;
+    width: 80%;
     bottom: 0;
     left: -12%;
     object-fit: contain;
@@ -462,7 +460,7 @@
 .page-4 {
     width: 100%;
     padding: 20px;
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
 }
 
 .readers {
@@ -488,15 +486,15 @@
 }
 
 .card {
-    min-width: 300px;
+    min-width: 500px !important;
     height: 160px;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255) !important;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .quote {
@@ -506,8 +504,9 @@
 }
 
 .card h3 {
+    width: 100% !important;
     color: rgb(0, 102, 245);
-    font-size: 20px;
+    font-size: 40px;
     line-height: 1.4;
     margin-top: 10px;
 }
@@ -755,48 +754,28 @@
     object-fit: cover;
 }
 
-.youtube {
-    width: 30px;
+
+.fa-play{
     position: absolute;
-    top: 30px;
-    left: 450px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
+    top: 50px;
+    left: 460px;
+    width: 350px;
     color: white;
 }
-
-.youtube-1 {
-    width: 30px;
+#play-1{
     position: absolute;
-    top: 30px;
-    left: 800px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
+    top: 50px;
+    left: 820px;
 }
-
-.youtube-2 {
-    width: 30px;
+#play-2{
     position: absolute;
-    top: 30px;
-    left: 1140px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
+    top: 50px;
+    left: 1155px;
 }
-
-.youtube-3 {
-    width: 30px;
+#play-3{
     position: absolute;
-    top: 30px;
-    left: 1470px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
+    top: 50px;
+    left: 1480px;
 }
 
 .overlay {
@@ -1030,7 +1009,7 @@
         z-index: 100;
     }
     .d-flex {
-    margin-left: 100px;
+    margin-left: 5px;
 }
 
     .navbar-brand img {
@@ -1100,20 +1079,9 @@
 
     }
 
-    .card {
+    .cdn {
         width: 100%;
         height: 420px;
-    }
-
-    .circle {
-        position: absolute;
-        width: 380px;
-        height: 380px;
-        border-radius: 50%;
-        background: radial-gradient(circle at center, #4ade80, #22c55e, #06b6d4);
-        top: 20px;
-        left: -20px;
-        opacity: 0.3;
     }
 
     .visual img {
@@ -1493,13 +1461,17 @@
 
 .contact-cover {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+    /* margin: auto; */
+    /* background-color: yellow; */
     background-color: rgb(255, 255, 255);
 }
 
 .contact-1 {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    margin: auto;
+    /* background-color: yellow; */
+    /* background-color: rgb(255, 255, 255); */
     flex-direction: column;
     gap: 30px;
 }
@@ -1507,8 +1479,6 @@
 .con-1 {
     width: 100%;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
-    height: 250px;
 }
 
 .con-1 p {
@@ -1516,24 +1486,24 @@
     font-weight: 500;
     font-size: 14px;
 }
-
+.con2{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
 .con2 a {
-    width: 50% !important;
-    margin: auto;
+    width: 100%;
     color: rgb(10, 47, 102);
-    padding: 20px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 6px;
     text-decoration: none;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    background-color: white;
 }
 
+
+
 .con2 img {
-    width: 18px;
-    height: 18px;
+    width: 10px;
+    height: 10px;
 }
 
 .con-3 {
@@ -1659,8 +1629,13 @@
     gap: 10px;
 }
 
-
-
+.dropdown-menu{
+    width: 350px;
+}
+.drop-cover{
+    flex-direction: column;
+    gap: 10px;
+}
 
 
 
