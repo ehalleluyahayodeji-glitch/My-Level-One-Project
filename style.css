@@ -239,6 +239,9 @@
 }
 
 .floating-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -251,6 +254,26 @@
     line-height: 1.5;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+.floating-text img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f5f6fa;
+    animation: floatUp 3s ease-in-out infinite;
+}
+@keyframes floatUp {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
 
 .page-3 {
     width: 100%;
@@ -969,6 +992,7 @@
 }
 .footer{
     width: 100%;
+    padding: 10px;
     background-color: rgb(252, 255, 252);
     display: flex;
     align-items: center;
@@ -979,7 +1003,7 @@
 }
 .footer span{
     color:  #97a9be;
-    margin: auto;
+
 }
 .footer a{
     text-decoration: none;
@@ -1028,7 +1052,7 @@
     .hero-section {
         width: 100%;
         padding: 20px;
-        margin-top: 30px;
+        margin-top: 130px;
     }
 
     .hero-section h1 {
@@ -1042,8 +1066,9 @@
     }
 
     .hero-section a {
-        width: 100%;
+        width: 80%;
         padding: 15px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
     }
 
     .page-2 {
@@ -1389,50 +1414,6 @@
     object-fit: cover;
 }
 
-.youtube {
-    width: 30px;
-    position: absolute;
-    top: 30px;
-    left: 450px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
-}
-
-.youtube-1 {
-    width: 30px;
-    position: absolute;
-    top: 30px;
-    left: 800px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
-}
-
-.youtube-2 {
-    width: 30px;
-    position: absolute;
-    top: 30px;
-    left: 1140px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
-}
-
-.youtube-3 {
-    width: 30px;
-    position: absolute;
-    top: 30px;
-    left: 1470px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 30px;
-    color: white;
-}
-
 .page-7 {
     width: 100%;
     padding: 20px;
@@ -1461,17 +1442,12 @@
 
 .contact-cover {
     width: 100%;
-    /* padding: 20px; */
-    /* margin: auto; */
-    /* background-color: yellow; */
     background-color: rgb(255, 255, 255);
 }
 
 .contact-1 {
     width: 100%;
     margin: auto;
-    /* background-color: yellow; */
-    /* background-color: rgb(255, 255, 255); */
     flex-direction: column;
     gap: 30px;
 }
@@ -1498,8 +1474,6 @@
     font-size: 6px;
     text-decoration: none;
 }
-
-
 
 .con2 img {
     width: 10px;
@@ -1535,7 +1509,7 @@
     width: 100%;
     background-color: rgb(252, 255, 252);
     flex-direction: column;
-    font-size: 15px;
+    font-size: 12px;
     
 }
 
@@ -1559,8 +1533,7 @@
     width: 100%;
     display: flex;
     margin-top: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    justify-content: space-between;
+
 }
 .page-81 p{
     font-size: 15px;
@@ -1603,18 +1576,10 @@
     font-weight: 450;
 }
 .footer{
-    width: 100%;
-    background-color: rgb(252, 255, 252);
-    display: flex;
-    align-items: center;
-    border: 3px solid rgb(252, 255, 252);
-    justify-content: space-around;
-    position: fixed;
-    bottom: 0;
+    
 }
 .footer span{
     color:  #97a9be;
-    margin: auto;
 }
 .footer a{
     text-decoration: none;
@@ -1655,23 +1620,6 @@
 
 
 
-
-
-
-
-
-
-
-/* Animation */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 
 
